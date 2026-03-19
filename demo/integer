@@ -1,0 +1,8 @@
+x = 1 
+z = - 3255522 
+y = 35656222554887711
+pi = 3.14
+print(type(pi)) 
+pi = int(pi) 
+print(type(pi)) 
+print(pi)
