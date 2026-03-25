@@ -1,0 +1,15 @@
+n=input('Enter name:')
+print('Hello ' + n)
+n1 = float(input('Enter num1:'))
+n2 = float(input('Enter num2:'))
+print('Your n1 is '+str(n1))
+print('Your n2 is '+str(n2))
+add = n1 + n2
+print('Sum:'+str(add))
+sub = n1 - n2
+print('Difference:'+str(sub))
+divide = n1 / n2
+print('Quotient:'+str(divide))
+multiply = n1 * n2 
+print('Product:'+str(multiply))
+
