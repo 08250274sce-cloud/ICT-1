@@ -1,0 +1,50 @@
+#Initialize empty list and dictionary to store student information.
+student_list = []
+student_dict = {}
+
+#Add initial student records manually.
+student_list.append("Sonam")
+student_dict["Sonam"] = {"Age":21, "Grade": "A"}
+
+student_list.append("Pema")
+student_dict["Pema"] = {"Age":20, "Grade":"A"}
+
+student_list.append("Zam")
+student_dict["Zam"] = {"Age":19, "Grade":"B"}
+
+student_list.append("Pem")
+student_dict["Pem"] = {"Age":22, "Grade":"C"}
+print("Exiting students: ", student_list) #Display exiting students.
+
+#Prompt user to add a new student.
+add_new_student=input("Enter new student name: ")
+add_student_age=int(input("Enter student age: "))
+add_student_grade=input("Enter student grade: ")
+
+#Add new student to list and dictionary. 
+student_list.append(add_new_student)
+student_dict[add_new_student]={"Age":add_student_age, "Grade": add_student_grade}
+
+#Confirm addition and display updated records.
+print("Your information has been sucessfully added.")
+print("New lists of students: ", student_dict)
+
+#Search for a student by name. 
+search_student = input("Enter the name of the student to search: ")
+if search_student in student_list:
+    print(f"Student found! The name of the student is {search_student}. Age is {student_dict [search_student]["Age"]}. Grade is {student_dict[search_student]["Grade"]}.")
+else:
+    print("Student not found!")
+
+#Remove a student by name>
+remove_student_name = input("Enter the name of the student to remove or else enter to skip: ")
+if remove_student_name in student_list:
+    student_list.remove(remove_student_name)
+    del student_dict[remove_student_name]
+
+    #Verify removal.
+    if remove_student_name not in student_dict: #check if the author has any other books in the dictionary
+     print("Student removed succesfully!")
+     print("Students left: ", student_list )
+else:
+    print("Student not found!")
